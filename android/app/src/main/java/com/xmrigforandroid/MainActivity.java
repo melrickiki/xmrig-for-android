@@ -23,4 +23,6 @@ public class MainActivity extends ReactActivity {
     super.onCreate(null);
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
   }
+
+
 }

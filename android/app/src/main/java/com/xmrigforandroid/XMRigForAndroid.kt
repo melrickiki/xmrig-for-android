@@ -19,8 +19,7 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import java.lang.Exception
 import com.facebook.react.bridge.ReactMethod
-
-
+import com.xmrigforandroid.utils.CPUTools
 
 
 class XMRigForAndroid(context: ReactApplicationContext) : ReactContextBaseJavaModule(context) {
@@ -67,6 +66,8 @@ class XMRigForAndroid(context: ReactApplicationContext) : ReactContextBaseJavaMo
         } catch (e: RemoteException) {
             e.printStackTrace()
         }
+        val cpuTools = CPUTools()
+        Log.d(this.javaClass.name, "temp: %f".format(cpuTools.getCurrentCPUTemperature()));
     }
 
     @ReactMethod
